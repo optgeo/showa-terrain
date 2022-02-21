@@ -1,0 +1,41 @@
+version: 8
+center:
+  - 39.507
+  - -69.021
+zoom: 12
+bearing: 60
+pitch: 60
+sources: 
+  t:
+    type: raster-dem
+    tiles:
+      - http://localhost:9966/zxy/{z}/{x}/{y}.webp
+    tileSize: 512
+    maxzoom: 16
+    attribution: Reference Elevation Model Antarctica (REMA)
+  v:
+    type: vector
+    tiles:
+      - https://x.optgeo.org/a-1/zxy/{z}/{x}/{y}.pbf
+    maxzoom: 16
+    minzoom: 8
+    attribution: GSI
+sprite: https://sprites.geolonia.com/basic
+glyphs: https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf 
+layers: 
+  - !!inc/file layers/sky.yml
+  - !!inc/file shade.yml
+  - !!inc/file layers/area.yml
+  - !!inc/file layers/coastline.yml
+  - !!inc/file layers/contour.yml
+  - !!inc/file layers/contour-dash.yml
+  - !!inc/file layers/boundary.yml
+  - !!inc/file layers/road.yml
+  - !!inc/file layers/pipeline.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/control.yml
+  - !!inc/file layers/symbol.yml
+  - !!inc/file layers/annotation.yml
+terrain:
+  source: t
+
