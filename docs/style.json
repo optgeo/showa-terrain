@@ -11,7 +11,7 @@
     "t": {
       "type": "raster-dem",
       "tiles": [
-        "http://localhost:9966/zxy/{z}/{x}/{y}.webp"
+        "https://optgeo.github.io/showa-terrain/zxy/{z}/{x}/{y}.webp"
       ],
       "tileSize": 512,
       "maxzoom": 16,
